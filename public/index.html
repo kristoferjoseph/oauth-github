@@ -1,34 +1,220 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset=utf-8>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hi from Begin!</title>
-  <link rel="stylesheet" href="https://static.begin.app/starter/default.css">
-  <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
+  <title>GitHub OAuth example</title>
+  <link
+    href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+    rel="icon"
+    type="image/x-icon"
+  >
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --light: #FEFEFE;
+      --mid: #DCDCDC;
+      --dark: #666;
+      --blue: #007ACC;
+      --purple: #9C24FF;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .height100 {
+      height: 100%;
+      height: 100vh;
+    }
+    .position-absolute {
+      position: absolute;
+    }
+    .position-relative {
+      position: relative;
+    }
+    .display-flex {
+      display: flex;
+    }
+    .flex-direction-column {
+      flex-direction: column;
+    }
+    .flex-grow0 {
+      flex-grow: 0;
+    }
+    .flex-grow60 {
+      flex-grow: 0.6;
+    }
+    .flex-grow1 {
+      flex-grow: 1;
+    }
+    .justify-content-center {
+      justify-content: center;
+    }
+    .background-color-light {
+      background-color: var(--light);
+    }
+    .clip-path-slant {
+      clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
+    }
+    .color-light {
+      color: var(--light);
+    }
+    body,
+    .linear-gradient1 {
+      background-image: linear-gradient(-5deg, var(--light), var(--mid));
+    }
+    .linear-gradient2 {
+      background-image: linear-gradient(-45deg, var(--blue), var(--purple));
+    }
+    .border-radius {
+      border-radius: 1rem;
+    }
+    .font-size1 {
+      font-size: 1.25rem;
+    }
+    .font-size2 {
+      font-size: 2rem;
+    }
+    .font-size3 {
+      font-size: 3rem;
+    }
+
+  </style>
 </head>
 <body>
-  <div class="center-text">
-    <img src="https://static.begin.app/starter/begin-logo.svg" style="max-width: 250px" class="center-text">
-    <div style="margin-bottom: 24px">
-      <h1 style="margin-bottom: 24px" class="center-text">
-        Howdy, Beginner!
-      </h1>
-      <p style="margin-bottom: 8px">
-        Get started by editing this file at:
-      </p>
-      <code>
-        public/index.html
-      </code>
-    </div>
-    <div>
-      <p style="margin-bottom: 8px">
-        View documentation at:
-      </p>
-      <a class="link" href="https://docs.begin.com" target="_blank">https://docs.begin.com</a>
-    </div>
+  <div
+    class="
+      height100
+      display-flex
+      flex-direction-column
+    "
+  >
+    <header
+      class="
+        flex-grow60
+        color-light
+        linear-gradient2
+        clip-path-slant
+      "
+      style="
+        z-index: -1;
+        text-align: center;
+        padding-top: 6rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+      "
+    >
+      <div>
+        <h1
+          class="
+            font-size3
+          "
+          style="
+            margin-bottom: 0.5rem;
+          "
+        >
+          OAuth with GitHub
+        </h1>
+        <p
+          class="
+            font-size1
+          "
+          style="
+            margin-bottom: 7rem;
+            font-weight: 100;
+          "
+        >
+          This is a working example of a static site using Github OAuth to authenticate.
+        </p>
+      </div>
+    </header>
+    <section
+      class="
+        flex-grow1
+      "
+    >
+      <div
+        class="
+          background-color-light
+          border-radius
+        "
+        style="
+          max-width: 25rem;
+          margin: 0 auto;
+          margin-top: -5rem;
+          padding: 2rem;
+          box-shadow: 0 1px 2px var(--mid);
+        "
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+          "
+        >
+          <div
+            id=avatar
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: -6rem;
+              width: 9rem;
+              height: 9rem;
+              border: 1rem solid var(--light);
+              border-radius: 100%;
+              background-color: #ddd;
+              object-fit: cover;
+              overflow: hidden;
+              box-shadow: 0 -1px 2px var(--mid);
+            "
+          >
+            <span
+              style="
+                font-size: 4rem;
+                font-weight: 700;
+                color: var(--light);
+              "
+            >
+              ?
+            </span>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #666;
+          "
+        >
+          <div
+            id=account
+            style="
+              padding-top: 1rem;
+            "
+          >
+          </div>
+          <span
+            id=auth
+            style="
+              margin-top: 1.5rem;
+              margin-bottom: 1.5rem;
+            "
+          >
+          </span>
+        </div>
+      </div>
+    </section>
   </div>
-  <script type="module" src="index.js"></script>
+  <script type=module src=index.js></script>
 </body>
 </html>
