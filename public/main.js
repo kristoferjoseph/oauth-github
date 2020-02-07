@@ -7,13 +7,13 @@
     .then(result => {
       let accountData = result.account
       let href = result.href
-      authEl.innerHTML = accountData
-        ? logout()
-        : login(href)
-      accountEl.innerHTML = accountData
-        ? account(accountData)
-        : accountEl.innerHTML
-      avatarEl.innerHTML = avatar(accountData.avatar)
+      if (accountData) {
+        authEl.innerHTML = logout()
+        accountEl.innerHTML = account(accountData)
+        avatarEl.innerHTML = avatar(accountData.avatar)
+      } else {
+        authEl.innerHTML = login(href)
+      }
     })
     .catch(error => {
       console.error(error)
