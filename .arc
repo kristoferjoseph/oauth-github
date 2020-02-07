@@ -5,6 +5,7 @@ fly-ogy
 
 @http
 get /login
+get /auth
 
 @tables
 data
