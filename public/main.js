@@ -37,15 +37,15 @@
     >
       Name
     </span>  <span
-      style="font-weight: 100"
+      class="font-weight100"
     >
       ${name}
     </span>
   </div>
   <div
-    class="display-flex"
-    style="
-      margin-bottom: 1rem;
+    class="
+      display-flex
+      margin-bottom0;
     "
   >
     <span
@@ -55,23 +55,11 @@
     >
       User
     </span>  <span
-      style="font-weight: 100"
+      class="font-weight100"
     >
       ${username}
     </span>
   </div>
-  <!--
-  <a
-    href="${github}"
-    style="
-      color: var(--blue);
-      text-decoration: none;
-      text-align: center;
-    "
-  >
-    GitHub Profile →
-  </a>
-  -->
     `
   }
 
@@ -86,22 +74,21 @@
   <a
     href=${href}
     class="
+      padding-top1
+      padding-right3
+      padding-bottom1
+      padding-left3
       linear-gradient2
       font-size1
       color-light
+      text-decoration-none
+      border-radius-1
+      border-none
+      cursor-pointer
+      login
     "
-    style="
-      padding-top: 1rem;
-      padding-right: 3rem;
-      padding-bottom: 1rem;
-      padding-left: 3rem;
-      font-size: 1.75rem;
-      text-decoration: none;
-      border-radius: 0.25rem;
-      border: none;
-      cursor: pointer;
-    "
-  >Login with GitHub</a>
+    alt="Login"
+  ></a>
     `
   }
 
@@ -110,25 +97,20 @@
   <form
     method=POST
     action=/logout
-    style="
-      margin-top: 0.5rem;
-    "
   >
     <button
       class="
+        padding-top1
+        padding-right3
+        padding-bottom1
+        padding-left3
+        font-size2
         linear-gradient2
         color-light
-      "
-      style="
-        padding-top: 1rem;
-        padding-right: 3rem;
-        padding-bottom: 1rem;
-        padding-left: 3rem;
-        font-size: 1.75rem;
-        text-decoration: none;
-        border-radius: 0.25rem;
-        border: none;
-        cursor: pointer;
+        text-decoration-none
+        border-radius-1
+        border-none
+        cursor-pointer
       "
     >
       Logout

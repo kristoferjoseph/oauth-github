@@ -21,25 +21,21 @@
     :root {
       --light: #FEFEFE;
       --mid: #DCDCDC;
+      --mid-dark: #DDD;
       --dark: #666;
       --blue: #007ACC;
       --purple: #9C24FF;
+      --angle: 45deg;
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      background-repeat: no-repeat;
-      background-size: cover;
     }
-
+    .max-width {
+      max-width: 20rem;
+    }
     .height100 {
       height: 100%;
       height: 100vh;
-    }
-    .position-absolute {
-      position: absolute;
-    }
-    .position-relative {
-      position: relative;
     }
     .display-flex {
       display: flex;
@@ -56,36 +52,211 @@
     .flex-grow1 {
       flex-grow: 1;
     }
+    .align-items-center {
+      align-items: center;
+    }
     .justify-content-center {
       justify-content: center;
     }
+
+    .margin-auto {
+      margin: 0 auto;
+    }
+
+    .margin-top2 {
+      margin-top: 1.5rem;
+    }
+
+    .margin-top-1 {
+      margin-top: 0.5rem;
+    }
+
+    .margin-top-5 {
+      margin-top: -5rem;
+    }
+
+    .margin-top-6 {
+      margin-top: -6rem;
+    }
+
+    .margin-bottom7 {
+      margin-bottom: 7rem;
+    }
+
+    .margin-bottom2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .margin-bottom0 {
+      margin-bottom: 1rem;
+    }
+
+    .padding1 {
+      padding: 1rem;
+    }
+
+    .padding-top6 {
+      padding-top: 6rem;
+    }
+
+    .padding-top1 {
+      padding-top: 1rem;
+    }
+
+    .padding-top0 {
+      padding-top: 0;
+    }
+
+    .padding-right3 {
+      padding-right: 3rem;
+    }
+
+    .padding-right2 {
+      padding-right: 2rem;
+    }
+
+    .padding-bottom1 {
+      padding-bottom: 1rem;
+    }
+
+    .padding-left3 {
+      padding-left: 3rem;
+    }
+
+    .padding-left2 {
+      padding-left: 2rem;
+    }
+
+
     .background-color-light {
       background-color: var(--light);
     }
+
+    .background-color-mid-dark {
+      background-color: var(--mid-dark);
+    }
+
     .clip-path-slant {
       clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
     }
     .color-light {
       color: var(--light);
     }
+    .color-dark {
+      color: var(--dark);
+    }
     body,
     .linear-gradient1 {
       background-image: linear-gradient(-5deg, var(--light), var(--mid));
     }
     .linear-gradient2 {
-      background-image: linear-gradient(-45deg, var(--blue), var(--purple));
+      background-image: linear-gradient(var(--angle), var(--blue), var(--purple));
     }
-    .border-radius {
+    .border-width0 {
+      border-width: 1rem;
+    }
+    .border-style-solid {
+      border-style: solid;
+    }
+    .border-color-light {
+      border-color: var(--light);
+    }
+    .border-none {
+      border: none;
+    }
+    .border-radius100 {
+      border-radius: 100%;
+    }
+    .border-radius0 {
       border-radius: 1rem;
+    }
+    .border-radius-1 {
+      border-radius: 0.25rem;
+    }
+    .font-size0 {
+      font-size: 1rem;
     }
     .font-size1 {
       font-size: 1.25rem;
     }
     .font-size2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     .font-size3 {
       font-size: 3rem;
+    }
+    .font-size4 {
+      font-size: 4rem;
+    }
+
+    .font-weight700 {
+      font-weight: 700;
+    }
+
+    .font-weight500 {
+      font-weight: 500;
+    }
+
+    .font-weight100 {
+      font-weight: 100;
+    }
+
+    .text-align-center {
+      text-align: center;
+    }
+
+    .text-decoration-none {
+      text-decoration: none;
+    }
+
+    .box-shadow1 {
+      box-shadow: 0 1px 2px var(--mid);
+    }
+
+    .box-shadow-1 {
+      box-shadow: 0 -1px 2px var(--mid);
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .z-index-1 {
+      z-index: -1;
+    }
+
+    .login::before {
+      content: 'Login'
+    }
+
+    @media only screen and (min-width:48em) {
+      .login:before {
+        content: 'Login with GitHub'
+      }
+
+      .max-width {
+        max-width: 25rem;
+      }
+
+      .padding2-lg {
+        padding: 2rem;
+      }
+
+      .font-size0-lg {
+        font-size: 1rem;
+      }
+
+      .font-size1-lg {
+        font-size: 1.25rem;
+      }
+
+      .font-size4-lg {
+        font-size: 4rem;
+      }
     }
 
   </style>
@@ -101,36 +272,32 @@
     <header
       class="
         flex-grow60
+        padding-top6
+        padding-right2
+        padding-left2
         color-light
         linear-gradient2
         clip-path-slant
-      "
-      style="
-        z-index: -1;
-        text-align: center;
-        padding-top: 6rem;
-        padding-right: 2rem;
-        padding-left: 2rem;
+        text-align-center
+        z-index-1
       "
     >
       <div>
         <h1
           class="
+            margin-bottom-1
             font-size3
-          "
-          style="
-            margin-bottom: 0.5rem;
+            font-size4-lg
           "
         >
           OAuth with GitHub
         </h1>
         <p
           class="
-            font-size1
-          "
-          style="
-            margin-bottom: 7rem;
-            font-weight: 100;
+            margin-bottom7
+            font-size0
+            font-size1-lg
+            font-weight100
           "
         >
           This is a working example of a static site using Github OAuth to authenticate.
@@ -144,45 +311,48 @@
     >
       <div
         class="
+          max-width
+          margin-auto
+          margin-top-5
+          padding1
+          padding2-lg
           background-color-light
-          border-radius
-        "
-        style="
-          max-width: 25rem;
-          margin: 0 auto;
-          margin-top: -5rem;
-          padding: 2rem;
-          box-shadow: 0 1px 2px var(--mid);
+          border-radius0
+          box-shadow1
         "
       >
         <div
-          style="
-            display: flex;
-            justify-content: center;
+          class="
+            display-flex
+            justify-content-center
           "
         >
           <div
             id=avatar
+            class="
+              display-flex
+              justify-content-center
+              align-items-center
+              margin-top-6
+              border-style-solid
+              border-width0
+              border-radius100
+              border-color-light
+              object-fit-cover
+              overflow-hidden
+              background-color-mid-dark
+              box-shadow-1
+            "
             style="
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin-top: -6rem;
               width: 9rem;
               height: 9rem;
-              border: 1rem solid var(--light);
-              border-radius: 100%;
-              background-color: #ddd;
-              object-fit: cover;
-              overflow: hidden;
-              box-shadow: 0 -1px 2px var(--mid);
             "
           >
             <span
-              style="
-                font-size: 4rem;
-                font-weight: 700;
-                color: var(--light);
+              class="
+                font-size4
+                font-weight-700
+                color-light
               "
             >
               ?
@@ -190,27 +360,27 @@
           </div>
         </div>
         <div
-          style="
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: #666;
+          class="
+            display-flex
+            flex-direction-column
+            align-items-center
+            font-size2
+            font-weight-500
+            color-dark
           "
         >
           <div
             id=account
-            style="
-              padding-top: 1rem;
+            class="
+              padding-top0
             "
           >
           </div>
           <span
             id=auth
-            style="
-              margin-top: 1.5rem;
-              margin-bottom: 1.5rem;
+            class="
+              margin-top2
+              margin-bottom2
             "
           >
           </span>
