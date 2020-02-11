@@ -37,7 +37,10 @@
     >
       Name
     </span>  <span
-      class="font-weight100"
+      class="
+        font-weight100
+        overflow-wrap-anywhere
+      "
     >
       ${name}
     </span>
@@ -55,7 +58,10 @@
     >
       User
     </span>  <span
-      class="font-weight100"
+      class="
+        font-weight100
+        overflow-wrap-anywhere
+      "
     >
       ${username}
     </span>

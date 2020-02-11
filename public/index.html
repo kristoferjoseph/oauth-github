@@ -153,7 +153,6 @@
     .color-dark {
       color: var(--dark);
     }
-    body,
     .linear-gradient1 {
       background-image: linear-gradient(-5deg, var(--light), var(--mid));
       background-repeat: no-repeat;
@@ -233,6 +232,10 @@
     .overflow-hidden {
       overflow: hidden;
     }
+    .overflow-wrap-anywhere {
+      word-wrap: break-all;
+      overflow-wrap: anywhere;
+    }
 
     .z-index-1 {
       z-index: -1;
@@ -274,7 +277,7 @@
 
   </style>
 </head>
-<body>
+<body class="linear-gradient1">
   <div
     class="
       height100
