@@ -1,6 +1,6 @@
 [![Begin build status](https://buildstatus.begin.app/fly-ogy/status.svg)](https://begin.com)
 
-A simple app with the minimum necessary file structure to get started on Begin.
+A working example of a static website that uses GitHub to authenticate.
 
 ## Deploy your own
 
