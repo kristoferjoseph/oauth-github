@@ -1,5 +1,3 @@
-<img src="https://static.begin.app/node-minimal/readme-banner.png" width="553">
-
 [![Begin build status](https://buildstatus.begin.app/fly-ogy/status.svg)](https://begin.com)
 
 A simple app with the minimum necessary file structure to get started on Begin.
