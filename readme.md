@@ -2,12 +2,6 @@
 
 A working example of a static website that uses GitHub to authenticate.
 
-## Deploy your own
-
-[![Deploy to Begin](https://static.begin.com/deploy-to-begin.svg)](https://begin.com/apps/create?template=https://github.com/begin-examples/node-minimal)
-
-Deploy your own clone of this app to Begin!
-
 ## Getting started
 
 - Start the local dev server: `npm start`
